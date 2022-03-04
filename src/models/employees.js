@@ -16,13 +16,14 @@ const employeeSchema= new mongoose.Schema({
     },
     gender:{
         type:String,
-        required:true,
-        enum:["male","female","transgender"],
+        required:true
     },
     mobile:{
         type:Number,
         required:true,
         unique:true,
+        minlength:10,
+        maxlength:10
     },
     age:{
         type:Number,
